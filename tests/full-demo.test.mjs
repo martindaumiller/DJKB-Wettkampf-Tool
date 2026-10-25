@@ -55,4 +55,5 @@ test('browser transport keeps Kata untimed, serializes conflicts and replays a c
  assert.deepEqual(results.map(x=>x.status).sort(),[200,409]);
  assert.equal((await read()).revision,replayed.revision+1);
  assert.equal((await demoFetch('https://elsewhere.example/demo/tool/api/state')).status,403);
+ values.set('djkb-full-demo-v1','broken-json');assert.equal((await demoFetch(endpoint('state'))).status,503);const reset=await demoFetch(endpoint('demo-reset'),{method:'POST',body:'{}'});assert.equal(reset.status,200);assert.equal((await read()).bouts.length,16);assert.notEqual((await read()).runId,before.runId);
 });

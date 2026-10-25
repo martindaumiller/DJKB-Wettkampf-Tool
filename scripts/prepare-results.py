@@ -33,6 +33,8 @@ for group in data['groups']:
 assert len(groups)==57 and sum(len(g['winners']) for g in groups)==213
 groups.sort(key=lambda g:(['Kata Einzel','Kata Team','Kumite Einzel','Kumite Team'].index(g['kind']),g['code']))
 pdf=source/'SDM-2026-Siegerliste.pdf';shutil.copyfile(pdf,out/pdf.name)
+assert data['trophy'][0]=={'rank':1,'dojo':'TV Bushido Tamm','points':39}
+assert data['trophy'][1]['dojo']=='KD Sportfreunde Reichenberg' and data['trophy'][1]['points']==39
 reader=PdfReader(pdf);writer=PdfWriter();writer.add_page(reader.pages[-1])
 with (out/'SDM-2026-Gesamtklassement-Wanderpokal.pdf').open('wb') as stream:writer.write(stream)
 # Generate by competition, because several disciplines share pages in the full PDF.
@@ -59,6 +61,6 @@ with tempfile.TemporaryDirectory(dir=root/'tmp') as tmp:
   target=out/('SDM-2026-'+section.replace(' ','-')+'.pdf')
   doc=SimpleDocTemplate(str(target),pagesize=A4,leftMargin=left,rightMargin=left,topMargin=29*mm,bottomMargin=22*mm,title='SDM 2026 - '+section,author='DJKB Stützpunkt Süd')
   doc.build(story,onFirstPage=header,onLaterPages=header)
-result={'date':'2026-10-24','source':'Freigegebene Siegerliste, Stand 25.10.2026','dojoCount':len(data['ranking']),'pdfBytes':pdf.stat().st_size,'trophy':[{'rank':1,'dojo':'KD Sportfreunde Reichenberg','points':43},{'rank':2,'dojo':'TV Bushido Tamm','points':39},{'rank':3,'dojo':'SV 1880 München','points':37}],'groups':groups}
+result={'date':'2026-10-24','source':'Freigegebene Siegerliste, Stand 25.10.2026','dojoCount':len(data['ranking']),'pdfBytes':pdf.stat().st_size,'trophy':data['trophy'],'groups':groups}
 (out/'results.json').write_text(json.dumps(result,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
 print('Public results:',len(groups),'groups,',sum(len(g['winners']) for g in groups),'placements.')

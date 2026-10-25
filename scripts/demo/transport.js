@@ -32,6 +32,8 @@ function database(env){
 async function execute(url,options={}){
  const u=new URL(url,location.href),path=u.pathname.split('/api/')[1];
  if(u.origin!==location.origin||!path||!u.pathname.includes('/demo/tool/'))throw fail('Die Turnierprobe darf nur ihre eigenen Beispieldaten verwenden.',403);
+ if(options.method&& !['GET','POST'].includes(options.method))throw fail('Nur Lesen oder JSON-Befehle erlaubt.',405);
+ if(path==='demo-reset'&&options.method==='POST'){const next=fresh();write(next);channel?.postMessage({changed:true});return response({ok:true});}
  const env=read(),s=env.model,user=role(s),ctx={accounts:[],audit:env.audit,ownerId:'demo-admin',makeUser(){throw fail('Echte Konten werden am Hallenserver eingerichtet.',403);}};
  let a={};if(options.body)try{a=JSON.parse(options.body);}catch{throw fail('Ungültige JSON-Eingabe.');}
  if(!options.method||options.method==='GET'){
