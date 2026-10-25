@@ -6,7 +6,7 @@ Lokaler Betrieb für Kata und Kumite: Wettkampfleitung, fünf Tische, Poolplanun
 
 **Grundprinzip:** Der Hallenserver ist die gemeinsame Datenquelle. Der Wettkampf benötigt keine Verbindung zu Cloudflare, ChatGPT oder einem Internetserver. Öffentliche Ergebnisse und Videoübertragung sind separate Aufgaben.
 
-Version 0.2.0 ist eine überprüfbare technische Grundlage. Eine Freigabe für ein nächstes Turnier setzt den vollständigen Probelauf auf den tatsächlichen Geräten voraus. Unabhängiges Community-Projekt; keine offizielle Softwarefreigabe des DJKB.
+Version 0.3.0 ist eine überprüfbare technische Grundlage. Eine Freigabe für ein nächstes Turnier setzt den vollständigen Probelauf auf den tatsächlichen Geräten voraus. Unabhängiges Community-Projekt; keine offizielle Softwarefreigabe des DJKB.
 
 ## Schnellstart
 
@@ -41,6 +41,14 @@ Standardmäßig bindet der Server ausschließlich an Loopback. `--lan` aktiviert
 - `/zentrum/index.html`: vollständige übernommene Turnieroberfläche mit Anmeldung.
 
 Die öffentliche Demo arbeitet mit fiktiven Daten, localStorage und BroadcastChannel. Mehrere Tabs **desselben Browsers und Ursprungs** teilen den Zustand. Sie simuliert keine Netzwerkverteilung über verschiedene Geräte und entscheidet keine echten Wettkämpfe. Für mehrere Geräte wird der Hallenserver verwendet.
+
+## Vollständige Turnierprobe
+
+Die öffentliche Turnierprobe unter `/demo/tool/public/zentrum/index.html` verwendet die Originaloberfläche und denselben Wettkampfkern. Zehn fiktive Gruppen zeigen Kata-Flaggen, Kata-Punkte mit fünf/sieben Kampfrichtern, Kihon-Ippon, Jiyu-Ippon, Jiyu-Kumite und Teams auf fünf Tatamis. Rollen, Gruppen/Pools, Teams, Auslosung, Freigaben, Korrekturen, Anzeigen und Drucklisten lassen sich damit prüfen. Die Schreibzugriffe werden mit Web Locks zwischen Tabs serialisiert; Befehls-ID und Begegnungsversion schützen gegen Wiederholung und veraltete Eingaben.
+
+Die Probe teilt ihre Beispieldaten nur im selben Browser. Für mehrere Geräte, echte Konten, Mail, Onlinevideo und externe Dienste wird der vollständige lokale Hallenserver verwendet. Keine echten Teilnehmerdaten in die öffentliche Probe importieren.
+
+Kata besitzt in beiden Vorschauen und im Wettkampfkern keine Zeitnahme. Das bereitgestellte DJKB-Stützpunkt-Süd-Logo ist wieder eingebunden; es fällt nicht unter die MIT-Lizenz des Codes.
 
 ## Betrieb
 
@@ -107,4 +115,4 @@ Ergebnisdaten und Sieger-PDFs gehören in `public/ergebnisse/`; sie werden **nic
 
 Beiträge über Issues und Pull Requests: [CONTRIBUTING.md](CONTRIBUTING.md). Prioritäten: schnellerer rollenbezogener Zustandsabgleich, generische Turnierkonfiguration, Hardwaretests, auswertbare Verbindungs-/Lastdiagnose und ein kontrollierter Ergebnisexport zur öffentlichen Website.
 
-MIT für den Projektcode. Eingebettete PDF-Bibliotheken und Noto Sans besitzen eigene freie Lizenzen; siehe [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md). Offizielle Logos/Gestikgrafiken, reale Kontakt-/Bankdaten, Zugangsdaten und private Teststream-Verweise sind nicht Bestandteil dieses Quellpakets.
+MIT für den Projektcode. Eingebettete PDF-Bibliotheken und Noto Sans besitzen eigene freie Lizenzen; siehe [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md). Kampfrichter-Gestikgrafiken, reale Kontakt-/Bankdaten, Zugangsdaten und private Teststream-Verweise sind nicht Bestandteil dieses Quellpakets.

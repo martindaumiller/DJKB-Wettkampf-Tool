@@ -17,3 +17,5 @@ public/ergebnisse/*.xlsx
 scripts/sanitize-source.py
 public/sw.js
 tmp/
+
+public/demo/tool/

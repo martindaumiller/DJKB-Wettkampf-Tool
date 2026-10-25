@@ -8,7 +8,7 @@ while(pending.length){
  if(!/^[a-zA-Z0-9_.-]+$/.test(file))throw Error('Ungültiger Modulpfad');
  let text=await readFile(path.join(src,file),'utf8');
  for(const match of text.matchAll(/(?:from\s*|src=)["']\.\/([^"'?#]+)(?:[^"']*)["']/g)){if(/\.(?:js|css)$/.test(match[1]))pending.push(match[1]);}
- text=text.replaceAll('../assets/mark.svg','../../assets/mark.svg').replaceAll('./djkb-sued.svg','../../assets/mark.svg');
+ text=text.replaceAll('../assets/djkb-sued.jpg','../../assets/djkb-sued.jpg').replaceAll('../assets/mark.svg','../../assets/mark.svg').replaceAll('./djkb-sued.svg','../../assets/mark.svg');
  await writeFile(path.join(out,file),text);
 }
 console.log('Demomodule vorbereitet: '+seen.size);
