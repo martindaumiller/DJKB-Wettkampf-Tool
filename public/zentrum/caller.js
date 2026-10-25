@@ -1,0 +1,26 @@
+import {requestJSON} from './request.js?v=57';
+import {resourceURL} from './resource-url.js?v=50';
+const q=new URLSearchParams(location.search),screen=q.get('screen'),scope=q.has('test')?'&test='+encodeURIComponent(q.get('test')):q.get('practice')==='1'?'&practice=1':'',esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let networkNext=0,last=0,busy=false,lock,tab='roster',rosterId='',resultId='',seen=false;
+const $=s=>document.querySelector(s),put=(id,html)=>{const e=$(id);if(e.innerHTML!==html)e.innerHTML=html;},called=id=>sessionStorage.getItem('sdm-called-'+id)==='1';
+function select(value){tab=value;document.querySelectorAll('[data-tab]').forEach(e=>{const yes=e.dataset.tab===tab;e.setAttribute('aria-selected',String(yes));e.tabIndex=yes?0:-1;});document.querySelectorAll('[data-pane]').forEach(e=>e.hidden=e.dataset.pane!==tab);}
+document.querySelectorAll('[data-tab]').forEach(e=>{e.onclick=()=>select(e.dataset.tab);e.onkeydown=event=>{if(!['ArrowLeft','ArrowRight'].includes(event.key))return;event.preventDefault();const tabs=[...document.querySelectorAll('[data-tab]')],i=tabs.indexOf(e),next=tabs[(i+(event.key==='ArrowRight'?1:2))%3];select(next.dataset.tab);next.focus();};});
+$('#roster-done').onclick=()=>{if(rosterId)sessionStorage.setItem('sdm-called-'+rosterId,'1');select('bout');};
+$('#next-call').onclick=()=>select(rosterId&&!called(rosterId)?'roster':'bout');
+function render(s){
+ $('#call-title').textContent='Ausruf · Tatami '+s.tatami;$('#connection').textContent='Stand '+new Date(last).toLocaleTimeString('de-DE');
+ const c=s.caller||{},r=c.roster,b=s.current?.status==='ready'?s.current:s.next[0],result=c.result;
+ if(r?.id&&r.id!==rosterId){rosterId=r.id;select(called(r.id)?'bout':'roster');}
+ if(result?.id&&result.id!==resultId){if(seen)select('winners');resultId=result.id;}
+ seen=true;
+ const status=s.closed?'Tatami abgeschlossen':s.paused?'Tatami pausiert':r&&!r.released?'Freigabe der Leitung abwarten':'Zum Ausrufen freigegeben';
+ $('#call-status').textContent=status;$('#call-status').classList.toggle('waiting',s.paused||!r?.released);$('#call-group').textContent=r?r.group+(r.pool?' · Pool '+r.pool:'')+(r.final?' · Finale':''):'';
+ $('#roster-done').hidden=!r||s.closed;$('#roster-note').textContent=r?(r.started?'Starter dieses Pools / dieser Runde':'Alle folgenden Starter bitte an Tatami '+s.tatami+' aufrufen'):'Nächster Gruppenaufruf folgt';
+ put('#call-roster',s.closed?'<p class="empty">Tatami abgeschlossen</p>':r?'<p class="description">'+esc(r.description)+'</p><p class="count">'+r.people.length+' '+(r.people.some(p=>p.members)?'Teams':'Starter')+'</p><ol class="roster">'+r.people.map(p=>'<li><strong class="name">'+esc(p.name)+'</strong><span class="dojo">'+esc(p.dojo)+'</span>'+(p.members?'<small>'+p.members.map(esc).join(' · ')+'</small>':'')+'</li>').join('')+'</ol>':'<p class="empty">Noch keine Starter eingeplant</p>');
+ $('#bout-note').textContent=b?'Als Nächstes · '+b.group+(b.pool?' · Pool '+b.pool:''):'Nächste Begegnung folgt';
+ put('#call-people',s.closed?'<p class="empty">Tatami abgeschlossen</p>':b?(b.shiro?['shiro','aka']:['aka']).map(side=>'<article class="side '+side+'"><span class="belt">'+(b.shiro?(side==='aka'?'Aka':'Shiro'):'Kata')+'</span><p class="name">'+esc(b[side]?.name||'Starter folgt')+'</p><p class="dojo">'+esc(b[side]?.dojo)+'</p></article>').join(''):'<p class="empty">Weitere Aufrufe folgen</p>');
+ put('#call-result',result?'<article class="winner"><small>'+esc(result.group)+' · letzte Begegnung</small><h3>'+(result.points?'Kata absolviert':result.winner?'Sieger':'Entscheidung')+'</h3><p class="name">'+esc((result.winner||result.athlete)?.name||result.reason)+'</p><p class="dojo">'+esc((result.winner||result.athlete)?.dojo)+'</p><small>'+esc(result.reason)+'</small></article>':'<p>Noch kein Ergebnis.</p>');
+ put('#call-podiums',(c.podiums||[]).map(g=>'<details class="podium" '+(g.group===result?.group?'open':'')+'><summary>'+esc(g.group)+' · Platzierungen'+(g.confirmed?'':' · vorläufig')+'</summary>'+g.places.map(p=>'<article><b>Platz '+p.place+'</b><p class="name">'+esc(p.athlete.name)+'</p><p class="dojo">'+esc(p.athlete.dojo)+'</p></article>').join('')+'</details>').join(''));
+}
+async function refresh(){if(busy||Date.now()<networkNext)return;busy=true;try{const {response,data:s}=await requestJSON(resourceURL('./api/display-state?screen='+encodeURIComponent(screen||'')+scope));if(!response.ok)throw Error(s.error);last=Date.now();networkNext=Date.now()+Math.max(1500,s.network?.screenMs||0);document.body.classList.remove('stale');render(s);}catch(e){networkNext=Date.now()+3000;document.body.classList.add('stale');$('#connection').textContent=e.message;}finally{busy=false;}}
+$('#full').onclick=async()=>{try{await document.documentElement.requestFullscreen();}catch{}try{lock=await navigator.wakeLock?.request('screen');}catch{}};document.addEventListener('visibilitychange',()=>{if(!document.hidden)refresh();});window.addEventListener('pagehide',()=>lock?.release());setInterval(refresh,1500);setInterval(()=>{if(last&&Date.now()-last>10000){document.body.classList.add('stale');$('#connection').textContent='Verbindung unterbrochen · Stand '+new Date(last).toLocaleTimeString('de-DE');}},1000);select(tab);await refresh();

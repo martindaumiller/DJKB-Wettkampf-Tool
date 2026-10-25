@@ -1,0 +1,1 @@
+Hier ausschließlich freigegebene öffentliche Ergebnisdaten ablegen. Die aktuelle SDM-Siegerliste gehört zum gesonderten STRATO-Paket. Ergebnisse und PDFs werden absichtlich nicht in Git aufgenommen. Die öffentliche Demo benötigt keine realen Ergebnisdaten.

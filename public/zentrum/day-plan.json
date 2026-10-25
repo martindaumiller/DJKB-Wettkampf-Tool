@@ -1,0 +1,113 @@
+{
+  "phaseStarts": [
+    "10:00",
+    "11:15",
+    "11:45",
+    "13:30",
+    "15:00",
+    "16:00",
+    "16:45"
+  ],
+  "kataIndividualStart": "14:15",
+  "blocks": [
+    {
+      "time": "10:00",
+      "title": "Kata-Team · 8–11 Jahre",
+      "groups": "I1",
+      "text": "Nur Kata-Team 8–11 Jahre; einschließlich Finalrunde."
+    },
+    {
+      "time": "11:15",
+      "title": "Kata Einzel · bis 12 Jahre",
+      "groups": "A–C",
+      "text": "A: bis 7 · B: 8–10 · C: 11–12 Jahre."
+    },
+    {
+      "time": "11:45",
+      "title": "Kumite Einzel · bis 12 Jahre",
+      "groups": "A–C",
+      "text": "A: bis 7 · B: 8–10 · C: 11–12 Jahre; einschließlich Finals."
+    },
+    {
+      "time": "12:30",
+      "title": "Siegerehrung · bis 12 Jahre",
+      "groups": "A–C und I1",
+      "text": "Einzelgruppen bis 12 Jahre und Kata-Team 8–11 Jahre."
+    },
+    {
+      "time": "13:00",
+      "title": "Mittagspause",
+      "groups": "Alle Tatamis",
+      "text": "Fortsetzung um 13:30 Uhr."
+    },
+    {
+      "time": "13:30",
+      "title": "Kata-Team · ab 12 Jahre",
+      "groups": "I2–I6",
+      "text": "12–14, 15–17 und ab 18 Jahre. Pools parallel nach Meldestand."
+    },
+    {
+      "time": "14:15",
+      "title": "Kata Einzel · ab 13 Jahre",
+      "groups": "D–H",
+      "text": "D: 13–14/15 · E: 15–16 · F: 17–18 · G: 19–20 · H: ab 21 Jahre."
+    },
+    {
+      "time": "15:00",
+      "title": "Kumite Einzel · ab 13 Jahre",
+      "groups": "D–H",
+      "text": "Pools einer Gruppe können parallel auf verschiedenen Tatamis laufen."
+    },
+    {
+      "time": "16:00",
+      "title": "Finals · Einzel ab 13 / Kata-Team ab 12 Jahre",
+      "groups": "D–H und I2–I6",
+      "text": "Finalrunden nach Abschluss und Zusammenführung der jeweiligen Pools."
+    },
+    {
+      "time": "16:45",
+      "title": "Kumite-Team · ab 14 Jahre",
+      "groups": "J1–J4",
+      "text": "14–17 Jahre und ab 18 Jahre; abschließend Siegerehrung. Geplantes Ende ca. 18:00 Uhr."
+    }
+  ],
+  "tatamis": [
+    {
+      "id": 1,
+      "team": "I1 · 8–11 Jahre",
+      "morning": "Einzel bis 12 Jahre · Pools nach Meldestand",
+      "afternoon": "Kata-Team ab 12 / Einzel ab 13 · Pools verschiedener Gruppen",
+      "finalTeam": "Kumite-Team ab 14 · nach Poolplanung"
+    },
+    {
+      "id": 2,
+      "team": "Nach Poolplanung",
+      "morning": "Einzel bis 12 Jahre · Pools nach Meldestand",
+      "afternoon": "Kata-Team ab 12 / Einzel ab 13 · Pools verschiedener Gruppen",
+      "finalTeam": "Kumite-Team ab 14 · nach Poolplanung"
+    },
+    {
+      "id": 3,
+      "team": "Nach Poolplanung",
+      "morning": "Einzel bis 12 Jahre · Pools nach Meldestand",
+      "afternoon": "Kata-Team ab 12 / Einzel ab 13 · Pools verschiedener Gruppen",
+      "finalTeam": "Kumite-Team ab 14 · nach Poolplanung"
+    },
+    {
+      "id": 4,
+      "team": "Nach Poolplanung",
+      "morning": "Einzel bis 12 Jahre · Pools nach Meldestand",
+      "afternoon": "Kata-Team ab 12 / Einzel ab 13 · Pools verschiedener Gruppen",
+      "finalTeam": "Kumite-Team ab 14 · nach Poolplanung"
+    },
+    {
+      "id": 5,
+      "team": "Nach Poolplanung",
+      "morning": "Einzel bis 12 Jahre · Pools nach Meldestand",
+      "afternoon": "Kata-Team ab 12 / Einzel ab 13 · Pools verschiedener Gruppen",
+      "finalTeam": "Kumite-Team ab 14 · nach Poolplanung"
+    }
+  ],
+  "ageNote": "Vormittag: Einzel bis einschließlich 12 Jahre und ausschließlich Kata-Team 8–11 Jahre. Ab 13:30: Kata-Team ab 12 Jahre. Ab 14:15: Einzel ab 13 Jahre. D umfasst je nach Kyu 13–14 oder 13–15 Jahre; die exakte Gruppeneinteilung folgt der Ausschreibung.",
+  "note": "Geplante Startzeiten. Die Berechnung unterhalb verwendet das aktuelle Starterfeld und die Pool-Reihenfolge. Poolzahl, Tatami und Reihenfolge können von der Leitung angepasst werden; laufende Kämpfe bleiben zugeordnet."
+}

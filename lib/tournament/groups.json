@@ -1,0 +1,862 @@
+[
+  {
+    "code": "A1 W",
+    "type": 0,
+    "minAge": 0,
+    "maxAge": 7,
+    "minKyu": 8,
+    "maxKyu": 7,
+    "gender": "w",
+    "description": "Kata Nachwuchs bis 7 Jahre - regionale Zusatzklasse (weiblich|8.-7. Kyu|bis 7 Jahre|Vorrunde: Heian 1; Finale: Heian 1-2)"
+  },
+  {
+    "code": "A1 M",
+    "type": 0,
+    "minAge": 0,
+    "maxAge": 7,
+    "minKyu": 8,
+    "maxKyu": 7,
+    "gender": "m",
+    "description": "Kata Nachwuchs bis 7 Jahre - regionale Zusatzklasse (maennlich|8.-7. Kyu|bis 7 Jahre|Vorrunde: Heian 1; Finale: Heian 1-2)"
+  },
+  {
+    "code": "A2 W",
+    "type": 1,
+    "minAge": 0,
+    "maxAge": 7,
+    "minKyu": 8,
+    "maxKyu": 7,
+    "gender": "w",
+    "description": "Kumite Nachwuchs bis 7 Jahre - regionale Zusatzklasse (weiblich|8.-7. Kyu|bis 7 Jahre|Kihon-Ippon Kumite)"
+  },
+  {
+    "code": "A2 M",
+    "type": 1,
+    "minAge": 0,
+    "maxAge": 7,
+    "minKyu": 8,
+    "maxKyu": 7,
+    "gender": "m",
+    "description": "Kumite Nachwuchs bis 7 Jahre - regionale Zusatzklasse (maennlich|8.-7. Kyu|bis 7 Jahre|Kihon-Ippon Kumite)"
+  },
+  {
+    "code": "A3 W",
+    "type": 0,
+    "minAge": 0,
+    "maxAge": 7,
+    "minKyu": 6,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kata Nachwuchs bis 7 Jahre - regionale Zusatzklasse (weiblich|ab 6. Kyu|bis 7 Jahre|Vorrunde und Finale: Heian 1-3)"
+  },
+  {
+    "code": "A3 M",
+    "type": 0,
+    "minAge": 0,
+    "maxAge": 7,
+    "minKyu": 6,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kata Nachwuchs bis 7 Jahre - regionale Zusatzklasse (maennlich|ab 6. Kyu|bis 7 Jahre|Vorrunde und Finale: Heian 1-3)"
+  },
+  {
+    "code": "A4 W",
+    "type": 1,
+    "minAge": 0,
+    "maxAge": 7,
+    "minKyu": 6,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kumite Nachwuchs bis 7 Jahre - regionale Zusatzklasse (weiblich|ab 6. Kyu|bis 7 Jahre|Kihon-Ippon Kumite)"
+  },
+  {
+    "code": "A4 M",
+    "type": 1,
+    "minAge": 0,
+    "maxAge": 7,
+    "minKyu": 6,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kumite Nachwuchs bis 7 Jahre - regionale Zusatzklasse (maennlich|ab 6. Kyu|bis 7 Jahre|Kihon-Ippon Kumite)"
+  },
+  {
+    "code": "B1 W",
+    "type": 0,
+    "minAge": 8,
+    "maxAge": 10,
+    "minKyu": 8,
+    "maxKyu": 6,
+    "gender": "w",
+    "description": "Kata Schüler 1 (8-10 Jahre) (weiblich|8.-6. Kyu|8-10 Jahre|Vorrunde: Heian 1-2; Finale: Heian 1-3)"
+  },
+  {
+    "code": "B1 M",
+    "type": 0,
+    "minAge": 8,
+    "maxAge": 10,
+    "minKyu": 8,
+    "maxKyu": 6,
+    "gender": "m",
+    "description": "Kata Schüler 1 (8-10 Jahre) (maennlich|8.-6. Kyu|8-10 Jahre|Vorrunde: Heian 1-2; Finale: Heian 1-3)"
+  },
+  {
+    "code": "B2 W",
+    "type": 1,
+    "minAge": 8,
+    "maxAge": 10,
+    "minKyu": 8,
+    "maxKyu": 6,
+    "gender": "w",
+    "description": "Kumite Schüler 1 (8-10 Jahre) (weiblich|8.-6. Kyu|8-10 Jahre|Kihon-Ippon Kumite)"
+  },
+  {
+    "code": "B2 M",
+    "type": 1,
+    "minAge": 8,
+    "maxAge": 10,
+    "minKyu": 8,
+    "maxKyu": 6,
+    "gender": "m",
+    "description": "Kumite Schüler 1 (8-10 Jahre) (maennlich|8.-6. Kyu|8-10 Jahre|Kihon-Ippon Kumite)"
+  },
+  {
+    "code": "B3 W",
+    "type": 0,
+    "minAge": 8,
+    "maxAge": 10,
+    "minKyu": 5,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kata Schüler 1 (8-10 Jahre) (weiblich|ab 5. Kyu|8-10 Jahre|Vorrunde: Heian 1-3; Finale: Tokui aus Heian 1-5)"
+  },
+  {
+    "code": "B3 M",
+    "type": 0,
+    "minAge": 8,
+    "maxAge": 10,
+    "minKyu": 5,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kata Schüler 1 (8-10 Jahre) (maennlich|ab 5. Kyu|8-10 Jahre|Vorrunde: Heian 1-3; Finale: Tokui aus Heian 1-5)"
+  },
+  {
+    "code": "B4 W",
+    "type": 1,
+    "minAge": 8,
+    "maxAge": 10,
+    "minKyu": 5,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kumite Schüler 1 (8-10 Jahre) (weiblich|ab 5. Kyu|8-10 Jahre|Jiyu-Ippon Kumite)"
+  },
+  {
+    "code": "B4 M",
+    "type": 1,
+    "minAge": 8,
+    "maxAge": 10,
+    "minKyu": 5,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kumite Schüler 1 (8-10 Jahre) (maennlich|ab 5. Kyu|8-10 Jahre|Jiyu-Ippon Kumite)"
+  },
+  {
+    "code": "C1 W",
+    "type": 0,
+    "minAge": 11,
+    "maxAge": 12,
+    "minKyu": 8,
+    "maxKyu": 7,
+    "gender": "w",
+    "description": "Kata Schüler 2 (11-12 Jahre) (weiblich|8.-7. Kyu|11-12 Jahre|Vorrunde: Heian 1-3; Finale: Heian 1-5)"
+  },
+  {
+    "code": "C1 M",
+    "type": 0,
+    "minAge": 11,
+    "maxAge": 12,
+    "minKyu": 8,
+    "maxKyu": 7,
+    "gender": "m",
+    "description": "Kata Schüler 2 (11-12 Jahre) (maennlich|8.-7. Kyu|11-12 Jahre|Vorrunde: Heian 1-3; Finale: Heian 1-5)"
+  },
+  {
+    "code": "C2 W",
+    "type": 1,
+    "minAge": 11,
+    "maxAge": 12,
+    "minKyu": 8,
+    "maxKyu": 7,
+    "gender": "w",
+    "description": "Kumite Schüler 2 (11-12 Jahre) (weiblich|8.-7. Kyu|11-12 Jahre|Kihon-Ippon Kumite)"
+  },
+  {
+    "code": "C2 M",
+    "type": 1,
+    "minAge": 11,
+    "maxAge": 12,
+    "minKyu": 8,
+    "maxKyu": 7,
+    "gender": "m",
+    "description": "Kumite Schüler 2 (11-12 Jahre) (maennlich|8.-7. Kyu|11-12 Jahre|Kihon-Ippon Kumite)"
+  },
+  {
+    "code": "C3 W",
+    "type": 0,
+    "minAge": 11,
+    "maxAge": 12,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "w",
+    "description": "Kata Schüler 2 (11-12 Jahre) (weiblich|6.-5. Kyu|11-12 Jahre|Vorrunde: Heian 1-3; Finale: Heian 1-5)"
+  },
+  {
+    "code": "C3 M",
+    "type": 0,
+    "minAge": 11,
+    "maxAge": 12,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "m",
+    "description": "Kata Schüler 2 (11-12 Jahre) (maennlich|6.-5. Kyu|11-12 Jahre|Vorrunde: Heian 1-3; Finale: Heian 1-5)"
+  },
+  {
+    "code": "C4 W",
+    "type": 1,
+    "minAge": 11,
+    "maxAge": 12,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "w",
+    "description": "Kumite Schüler 2 (11-12 Jahre) (weiblich|6.-5. Kyu|11-12 Jahre|Kihon-Ippon Kumite)"
+  },
+  {
+    "code": "C4 M",
+    "type": 1,
+    "minAge": 11,
+    "maxAge": 12,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "m",
+    "description": "Kumite Schüler 2 (11-12 Jahre) (maennlich|6.-5. Kyu|11-12 Jahre|Kihon-Ippon Kumite)"
+  },
+  {
+    "code": "C5 W",
+    "type": 0,
+    "minAge": 11,
+    "maxAge": 12,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kata Schüler 2 (11-12 Jahre) (weiblich|ab 4. Kyu|11-12 Jahre|Vorrunde: Heian 1-4; Finale: Heian 1-5, Tekki 1 oder Sentei-Kata)"
+  },
+  {
+    "code": "C5 M",
+    "type": 0,
+    "minAge": 11,
+    "maxAge": 12,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kata Schüler 2 (11-12 Jahre) (maennlich|ab 4. Kyu|11-12 Jahre|Vorrunde: Heian 1-4; Finale: Heian 1-5, Tekki 1 oder Sentei-Kata)"
+  },
+  {
+    "code": "C6 W",
+    "type": 1,
+    "minAge": 11,
+    "maxAge": 12,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kumite Schüler 2 (11-12 Jahre) (weiblich|ab 4. Kyu|11-12 Jahre|Jiyu-Ippon; die letzten 8: Jiyu-Kumite)"
+  },
+  {
+    "code": "C6 M",
+    "type": 1,
+    "minAge": 11,
+    "maxAge": 12,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kumite Schüler 2 (11-12 Jahre) (maennlich|ab 4. Kyu|11-12 Jahre|Jiyu-Ippon; die letzten 8: Jiyu-Kumite)"
+  },
+  {
+    "code": "D1 W",
+    "type": 0,
+    "minAge": 13,
+    "maxAge": 15,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "w",
+    "description": "Kata Schüler 3 (weiblich|6.-5. Kyu|13-15 Jahre|Vorrunde: Heian 1-4; Finale: Heian 1-5)"
+  },
+  {
+    "code": "D1 M",
+    "type": 0,
+    "minAge": 13,
+    "maxAge": 15,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "m",
+    "description": "Kata Schüler 3 (maennlich|6.-5. Kyu|13-15 Jahre|Vorrunde: Heian 1-4; Finale: Heian 1-5)"
+  },
+  {
+    "code": "D2 W",
+    "type": 1,
+    "minAge": 13,
+    "maxAge": 15,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "w",
+    "description": "Kumite Schüler 3 (weiblich|6.-5. Kyu|13-15 Jahre|Jiyu-Ippon Kumite)"
+  },
+  {
+    "code": "D2 M",
+    "type": 1,
+    "minAge": 13,
+    "maxAge": 15,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "m",
+    "description": "Kumite Schüler 3 (maennlich|6.-5. Kyu|13-15 Jahre|Jiyu-Ippon Kumite)"
+  },
+  {
+    "code": "D3 W",
+    "type": 0,
+    "minAge": 13,
+    "maxAge": 14,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kata Schüler 3 (weiblich|ab 4. Kyu|13-14 Jahre|Vorrunde: Heian 1-5; Finale: Heian 1-5, Tekki 1 oder Sentei-Kata)"
+  },
+  {
+    "code": "D3 M",
+    "type": 0,
+    "minAge": 13,
+    "maxAge": 14,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kata Schüler 3 (maennlich|ab 4. Kyu|13-14 Jahre|Vorrunde: Heian 1-5; Finale: Heian 1-5, Tekki 1 oder Sentei-Kata)"
+  },
+  {
+    "code": "D4 W",
+    "type": 1,
+    "minAge": 13,
+    "maxAge": 14,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kumite Schüler 3 (weiblich|ab 4. Kyu|13-14 Jahre|Jiyu-Kumite)"
+  },
+  {
+    "code": "D4 M",
+    "type": 1,
+    "minAge": 13,
+    "maxAge": 14,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kumite Schüler 3 (maennlich|ab 4. Kyu|13-14 Jahre|Jiyu-Kumite)"
+  },
+  {
+    "code": "E1 W",
+    "type": 0,
+    "minAge": 15,
+    "maxAge": 16,
+    "minKyu": 7,
+    "maxKyu": 7,
+    "gender": "w",
+    "description": "Kata Jugend 1 (15-16 Jahre) (weiblich|7. Kyu|15-16 Jahre|Vorrunde: Heian 1-3; Finale: Heian 1-5)"
+  },
+  {
+    "code": "E1 M",
+    "type": 0,
+    "minAge": 15,
+    "maxAge": 16,
+    "minKyu": 7,
+    "maxKyu": 7,
+    "gender": "m",
+    "description": "Kata Jugend 1 (15-16 Jahre) (maennlich|7. Kyu|15-16 Jahre|Vorrunde: Heian 1-3; Finale: Heian 1-5)"
+  },
+  {
+    "code": "E2 W",
+    "type": 1,
+    "minAge": 15,
+    "maxAge": 16,
+    "minKyu": 7,
+    "maxKyu": 7,
+    "gender": "w",
+    "description": "Kumite Jugend 1 (15-16 Jahre) (weiblich|7. Kyu|15-16 Jahre|Kihon-Ippon Kumite)"
+  },
+  {
+    "code": "E2 M",
+    "type": 1,
+    "minAge": 15,
+    "maxAge": 16,
+    "minKyu": 7,
+    "maxKyu": 7,
+    "gender": "m",
+    "description": "Kumite Jugend 1 (15-16 Jahre) (maennlich|7. Kyu|15-16 Jahre|Kihon-Ippon Kumite)"
+  },
+  {
+    "code": "E3 W",
+    "type": 0,
+    "minAge": 16,
+    "maxAge": 16,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "w",
+    "description": "Kata Jugend 1 (15-16 Jahre) (weiblich|6.-5. Kyu|16 Jahre|Vorrunde: Heian 1-4; Finale: Heian 1-5)"
+  },
+  {
+    "code": "E3 M",
+    "type": 0,
+    "minAge": 16,
+    "maxAge": 16,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "m",
+    "description": "Kata Jugend 1 (15-16 Jahre) (maennlich|6.-5. Kyu|16 Jahre|Vorrunde: Heian 1-4; Finale: Heian 1-5)"
+  },
+  {
+    "code": "E4 W",
+    "type": 1,
+    "minAge": 16,
+    "maxAge": 16,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "w",
+    "description": "Kumite Jugend 1 (15-16 Jahre) (weiblich|6.-5. Kyu|16 Jahre|Jiyu-Ippon Kumite)"
+  },
+  {
+    "code": "E4 M",
+    "type": 1,
+    "minAge": 16,
+    "maxAge": 16,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "m",
+    "description": "Kumite Jugend 1 (15-16 Jahre) (maennlich|6.-5. Kyu|16 Jahre|Jiyu-Ippon Kumite)"
+  },
+  {
+    "code": "E5 W",
+    "type": 0,
+    "minAge": 15,
+    "maxAge": 16,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kata Jugend 1 (15-16 Jahre) (weiblich|ab 4. Kyu|15-16 Jahre|Vorrunde: Heian 1-5; Finale: Heian 1-5, Tekki 1 oder Sentei-Kata)"
+  },
+  {
+    "code": "E5 M",
+    "type": 0,
+    "minAge": 15,
+    "maxAge": 16,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kata Jugend 1 (15-16 Jahre) (maennlich|ab 4. Kyu|15-16 Jahre|Vorrunde: Heian 1-5; Finale: Heian 1-5, Tekki 1 oder Sentei-Kata)"
+  },
+  {
+    "code": "E6 W",
+    "type": 1,
+    "minAge": 15,
+    "maxAge": 16,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kumite Jugend 1 (15-16 Jahre) (weiblich|ab 4. Kyu|15-16 Jahre|Jiyu-Kumite)"
+  },
+  {
+    "code": "E6 M",
+    "type": 1,
+    "minAge": 15,
+    "maxAge": 16,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kumite Jugend 1 (15-16 Jahre) (maennlich|ab 4. Kyu|15-16 Jahre|Jiyu-Kumite)"
+  },
+  {
+    "code": "F1 W",
+    "type": 0,
+    "minAge": 17,
+    "maxAge": 18,
+    "minKyu": 7,
+    "maxKyu": 7,
+    "gender": "w",
+    "description": "Kata Jugend 2 (17-18 Jahre) (weiblich|7. Kyu|17-18 Jahre|Vorrunde: Heian 1-3; Finale: Heian 1-5)"
+  },
+  {
+    "code": "F1 M",
+    "type": 0,
+    "minAge": 17,
+    "maxAge": 18,
+    "minKyu": 7,
+    "maxKyu": 7,
+    "gender": "m",
+    "description": "Kata Jugend 2 (17-18 Jahre) (maennlich|7. Kyu|17-18 Jahre|Vorrunde: Heian 1-3; Finale: Heian 1-5)"
+  },
+  {
+    "code": "F2 W",
+    "type": 1,
+    "minAge": 17,
+    "maxAge": 18,
+    "minKyu": 7,
+    "maxKyu": 7,
+    "gender": "w",
+    "description": "Kumite Jugend 2 (17-18 Jahre) (weiblich|7. Kyu|17-18 Jahre|Kihon-Ippon Kumite)"
+  },
+  {
+    "code": "F2 M",
+    "type": 1,
+    "minAge": 17,
+    "maxAge": 18,
+    "minKyu": 7,
+    "maxKyu": 7,
+    "gender": "m",
+    "description": "Kumite Jugend 2 (17-18 Jahre) (maennlich|7. Kyu|17-18 Jahre|Kihon-Ippon Kumite)"
+  },
+  {
+    "code": "F3 W",
+    "type": 0,
+    "minAge": 17,
+    "maxAge": 18,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "w",
+    "description": "Kata Jugend 2 (17-18 Jahre) (weiblich|6.-5. Kyu|17-18 Jahre|Vorrunde: Heian 1-4; Finale: Heian 1-5)"
+  },
+  {
+    "code": "F3 M",
+    "type": 0,
+    "minAge": 17,
+    "maxAge": 18,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "m",
+    "description": "Kata Jugend 2 (17-18 Jahre) (maennlich|6.-5. Kyu|17-18 Jahre|Vorrunde: Heian 1-4; Finale: Heian 1-5)"
+  },
+  {
+    "code": "F4 W",
+    "type": 1,
+    "minAge": 17,
+    "maxAge": 18,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "w",
+    "description": "Kumite Jugend 2 (17-18 Jahre) (weiblich|6.-5. Kyu|17-18 Jahre|Jiyu-Ippon Kumite)"
+  },
+  {
+    "code": "F4 M",
+    "type": 1,
+    "minAge": 17,
+    "maxAge": 18,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "m",
+    "description": "Kumite Jugend 2 (17-18 Jahre) (maennlich|6.-5. Kyu|17-18 Jahre|Jiyu-Ippon Kumite)"
+  },
+  {
+    "code": "F5 W",
+    "type": 0,
+    "minAge": 17,
+    "maxAge": 18,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kata Jugend 2 (17-18 Jahre) (weiblich|ab 4. Kyu|17-18 Jahre|Vorrunde: Heian 1-5; Finale: Heian 1-5, Tekki 1 oder Sentei-Kata)"
+  },
+  {
+    "code": "F5 M",
+    "type": 0,
+    "minAge": 17,
+    "maxAge": 18,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kata Jugend 2 (17-18 Jahre) (maennlich|ab 4. Kyu|17-18 Jahre|Vorrunde: Heian 1-5; Finale: Heian 1-5, Tekki 1 oder Sentei-Kata)"
+  },
+  {
+    "code": "F6 W",
+    "type": 1,
+    "minAge": 17,
+    "maxAge": 18,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kumite Jugend 2 (17-18 Jahre) (weiblich|ab 4. Kyu|17-18 Jahre|Jiyu-Kumite)"
+  },
+  {
+    "code": "F6 M",
+    "type": 1,
+    "minAge": 17,
+    "maxAge": 18,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kumite Jugend 2 (17-18 Jahre) (maennlich|ab 4. Kyu|17-18 Jahre|Jiyu-Kumite)"
+  },
+  {
+    "code": "G1 W",
+    "type": 0,
+    "minAge": 19,
+    "maxAge": 20,
+    "minKyu": 7,
+    "maxKyu": 7,
+    "gender": "w",
+    "description": "Kata Junioren (19-20 Jahre) (weiblich|7. Kyu|19-20 Jahre|Vorrunde: Heian 1-3; Finale: Heian 1-5)"
+  },
+  {
+    "code": "G1 M",
+    "type": 0,
+    "minAge": 19,
+    "maxAge": 20,
+    "minKyu": 7,
+    "maxKyu": 7,
+    "gender": "m",
+    "description": "Kata Junioren (19-20 Jahre) (maennlich|7. Kyu|19-20 Jahre|Vorrunde: Heian 1-3; Finale: Heian 1-5)"
+  },
+  {
+    "code": "G2 W",
+    "type": 1,
+    "minAge": 19,
+    "maxAge": 20,
+    "minKyu": 7,
+    "maxKyu": 7,
+    "gender": "w",
+    "description": "Kumite Junioren (19-20 Jahre) (weiblich|7. Kyu|19-20 Jahre|Kihon-Ippon Kumite)"
+  },
+  {
+    "code": "G2 M",
+    "type": 1,
+    "minAge": 19,
+    "maxAge": 20,
+    "minKyu": 7,
+    "maxKyu": 7,
+    "gender": "m",
+    "description": "Kumite Junioren (19-20 Jahre) (maennlich|7. Kyu|19-20 Jahre|Kihon-Ippon Kumite)"
+  },
+  {
+    "code": "G3 W",
+    "type": 0,
+    "minAge": 19,
+    "maxAge": 20,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "w",
+    "description": "Kata Junioren (19-20 Jahre) (weiblich|6.-5. Kyu|19-20 Jahre|Vorrunde: Heian 1-4; Finale: Heian 1-5)"
+  },
+  {
+    "code": "G3 M",
+    "type": 0,
+    "minAge": 19,
+    "maxAge": 20,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "m",
+    "description": "Kata Junioren (19-20 Jahre) (maennlich|6.-5. Kyu|19-20 Jahre|Vorrunde: Heian 1-4; Finale: Heian 1-5)"
+  },
+  {
+    "code": "G4 W",
+    "type": 1,
+    "minAge": 19,
+    "maxAge": 20,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "w",
+    "description": "Kumite Junioren (19-20 Jahre) (weiblich|6.-5. Kyu|19-20 Jahre|Jiyu-Ippon Kumite)"
+  },
+  {
+    "code": "G4 M",
+    "type": 1,
+    "minAge": 19,
+    "maxAge": 20,
+    "minKyu": 6,
+    "maxKyu": 5,
+    "gender": "m",
+    "description": "Kumite Junioren (19-20 Jahre) (maennlich|6.-5. Kyu|19-20 Jahre|Jiyu-Ippon Kumite)"
+  },
+  {
+    "code": "G5 W",
+    "type": 0,
+    "minAge": 19,
+    "maxAge": 20,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kata Junioren (19-20 Jahre) (weiblich|ab 4. Kyu|19-20 Jahre|Vorrunde: Heian 1-5, Tekki 1; Finale: Tokui frei)"
+  },
+  {
+    "code": "G5 M",
+    "type": 0,
+    "minAge": 19,
+    "maxAge": 20,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kata Junioren (19-20 Jahre) (maennlich|ab 4. Kyu|19-20 Jahre|Vorrunde: Heian 1-5, Tekki 1; Finale: Tokui frei)"
+  },
+  {
+    "code": "G6 W",
+    "type": 1,
+    "minAge": 19,
+    "maxAge": 20,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kumite Junioren (19-20 Jahre) (weiblich|ab 4. Kyu|19-20 Jahre|Jiyu-Kumite)"
+  },
+  {
+    "code": "G6 M",
+    "type": 1,
+    "minAge": 19,
+    "maxAge": 20,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kumite Junioren (19-20 Jahre) (maennlich|ab 4. Kyu|19-20 Jahre|Jiyu-Kumite)"
+  },
+  {
+    "code": "H1 W",
+    "type": 0,
+    "minAge": 21,
+    "maxAge": 99,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kata Aktive (ab 21 Jahre) (weiblich|ab 4. Kyu|ab 21 Jahre|Vorrunde: Heian 1-5, Tekki 1; Finale: Tokui frei)"
+  },
+  {
+    "code": "H1 M",
+    "type": 0,
+    "minAge": 21,
+    "maxAge": 99,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kata Aktive (ab 21 Jahre) (maennlich|ab 4. Kyu|ab 21 Jahre|Vorrunde: Heian 1-5, Tekki 1; Finale: Tokui frei)"
+  },
+  {
+    "code": "H2 W",
+    "type": 1,
+    "minAge": 21,
+    "maxAge": 99,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kumite Aktive (ab 21 Jahre) (weiblich|ab 4. Kyu|ab 21 Jahre|Jiyu-Kumite)"
+  },
+  {
+    "code": "H2 M",
+    "type": 1,
+    "minAge": 21,
+    "maxAge": 99,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kumite Aktive (ab 21 Jahre) (maennlich|ab 4. Kyu|ab 21 Jahre|Jiyu-Kumite)"
+  },
+  {
+    "code": "I1",
+    "type": 2,
+    "minAge": 8,
+    "maxAge": 11,
+    "minKyu": 6,
+    "maxKyu": 0,
+    "gender": "x",
+    "description": "Kata-Team Kata-Teams (mixed|ab 6. Kyu|8-11 Jahre|mixed; 3 Personen)"
+  },
+  {
+    "code": "I2",
+    "type": 2,
+    "minAge": 12,
+    "maxAge": 14,
+    "minKyu": 6,
+    "maxKyu": 0,
+    "gender": "x",
+    "description": "Kata-Team Kata-Teams (mixed|ab 6. Kyu|12-14 Jahre|mixed; 3 Personen)"
+  },
+  {
+    "code": "I3 W",
+    "type": 2,
+    "minAge": 15,
+    "maxAge": 17,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kata-Team Kata-Teams (weiblich|ab 4. Kyu|15-17 Jahre|Mädchen; 3 Personen)"
+  },
+  {
+    "code": "I4 M",
+    "type": 2,
+    "minAge": 15,
+    "maxAge": 17,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kata-Team Kata-Teams (maennlich|ab 4. Kyu|15-17 Jahre|Jungen; 3 Personen)"
+  },
+  {
+    "code": "I5 W",
+    "type": 2,
+    "minAge": 18,
+    "maxAge": 99,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kata-Team Kata-Teams (weiblich|ab 4. Kyu|ab 18 Jahre|Frauen; 3 Personen)"
+  },
+  {
+    "code": "I6 M",
+    "type": 2,
+    "minAge": 18,
+    "maxAge": 99,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kata-Team Kata-Teams (maennlich|ab 4. Kyu|ab 18 Jahre|Männer; 3 Personen)"
+  },
+  {
+    "code": "J1 W",
+    "type": 3,
+    "minAge": 14,
+    "maxAge": 17,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kumite-Team Kumite-Teams (weiblich|ab 4. Kyu|14-17 Jahre|Mädchen; Jiyu-Kumite; 3 Personen)"
+  },
+  {
+    "code": "J2 M",
+    "type": 3,
+    "minAge": 14,
+    "maxAge": 17,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kumite-Team Kumite-Teams (maennlich|ab 4. Kyu|14-17 Jahre|Jungen; Jiyu-Kumite; 3 Personen)"
+  },
+  {
+    "code": "J3 W",
+    "type": 3,
+    "minAge": 18,
+    "maxAge": 99,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "w",
+    "description": "Kumite-Team Kumite-Teams (weiblich|ab 4. Kyu|ab 18 Jahre|Frauen; Jiyu-Kumite; 3 Personen)"
+  },
+  {
+    "code": "J4 M",
+    "type": 3,
+    "minAge": 18,
+    "maxAge": 99,
+    "minKyu": 4,
+    "maxKyu": 0,
+    "gender": "m",
+    "description": "Kumite-Team Kumite-Teams (maennlich|ab 4. Kyu|ab 18 Jahre|Männer; Jiyu-Kumite; 3 Personen)"
+  }
+]

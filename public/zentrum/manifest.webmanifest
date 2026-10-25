@@ -1,0 +1,16 @@
+{
+  "theme_color": "#183b35",
+  "short_name": "DJKB Tool",
+  "display": "standalone",
+  "background_color": "#f6f3ea",
+  "icons": [
+    {
+      "src": "../assets/mark.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any"
+    }
+  ],
+  "name": "DJKB Wettkampf Tool",
+  "start_url": "./index.html"
+}

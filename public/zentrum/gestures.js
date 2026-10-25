@@ -1,0 +1,20 @@
+import {resourceURL} from './resource-url.js?v=50';
+const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const decisions={
+ Hantei:{image:'side-ippon',help:'Hantei: Hauptkampfrichter fordert die Flaggenentscheidung an; Seitenkampfrichter heben die Flagge der gewählten Seite. Das Bild zeigt die Flaggenhebung, keine zusätzliche Punktwertung. Gewählte Seite ist der bestätigte Sieger.'},
+ Ippon:{image:'ippon',help:'Ippon: voller Punkt. Der Hauptkampfrichter zeigt die Wertung zur betreffenden Seite an.'},
+ 'Awazete-Ippon':{image:'ippon',help:'Awazete-Ippon: zwei Wazaari ergeben Ippon. Die gewählte Seite gewinnt.'},
+ Hansoku:{image:'hansoku',help:'Hansoku: Disqualifikation in dieser Begegnung. Die gewählte Siegerseite ist der Gegner der disqualifizierten Person.'},
+ Kiken:{image:'kiken',help:'Kiken: Aufgabe oder Nichtantritt. Die gewählte Siegerseite ist der Gegner der ausgeschiedenen Person.'},
+ Shikkaku:{image:'shikkaku',help:'Shikkaku: Ausschluss durch das Kampfgericht; weitere Starts werden gesperrt. Die gewählte Seite ist der Gegner.'},
+ 'Beide disqualifiziert':{image:'hansoku',help:'Beidseitige Disqualifikation: Entscheidung für beide Seiten, kein Sieger. Der konkrete Ausschlussgrund folgt der Entscheidung des Kampfgerichts.'}
+};
+export function decisionChoices(reasons,selected='Hantei'){
+ return '<fieldset class="decision-choices"><legend>Entscheidung des Kampfgerichts</legend>'+reasons.map(reason=>{const d=decisions[reason];if(!d)throw Error('Unbekannte Entscheidung');return '<label class="decision-choice" title="'+escapeHTML(d.help)+'"><input type="radio" name="reason" value="'+escapeHTML(reason)+'" '+(reason===selected?'checked':'')+' required><span><b>'+escapeHTML(reason)+'</b><small>'+escapeHTML(d.help)+'</small></span></label>';}).join('')+'</fieldset>';
+}
+const oldNames={hajime:'Tsuzukete Hajime · weiterkämpfen',yame:'Yame · unterbrechen',wazaari:'Wazaari · halber Punkt',ippon:'Ippon · voller Punkt',hansoku:'Hansoku · Disqualifikation',kiken:'Kiken · Aufgabe / Nichtantritt',shikkaku:'Shikkaku · Ausschluss',hikiwake:'Hikiwake · unentschieden'};
+const names={yame:'Yame · unterbrechen','tsuzukete-hajime':'Tsuzukete Hajime · weiterkämpfen',wazaari:'Wazaari · halber Punkt',ippon:'Ippon · voller Punkt',torimasen:'Torimasen · keine Wertung',keikoku:'Keikoku · Verwarnung',chui:'Chui · ernste Verwarnung',jogai:'Jogai · Kampffläche verlassen',mubobi:'Mubobi · ungenügender Eigenschutz',shugo:'Shugo · Kampfgericht zusammenrufen',hikiwake:'Hikiwake · unentschieden',hansoku:'Hansoku · Disqualifikation',kiken:'Kiken · Aufgabe / Nichtantritt',shikkaku:'Shikkaku · Ausschluss',hayai:'Hayai · früher',aiuchi:'Aiuchi · gleichzeitig',maai:'Maai · Abstand',uketemasu:'Uketemasu · geblockt',nuketemasu:'Nuketemasu · vorbeigegangen',yowai:'Yowai · zu schwach','moto-no-ichi':'Moto no ichi · Ausgangsposition',hajime:'Shobu Ippon Hajime · beginnen'};
+const sides=['wazaari','ippon','torimasen','mienai','chui','hikiwake','hansoku','jogai','yowai','hayai','maai','mubobi','prepare','aiuchi','uketemasu','nuketemasu'];
+const figure=(id,label)=>'<figure><figcaption>'+escapeHTML(label)+'</figcaption></figure>';
+export function gestureHelp(kind){const ids=kind==='kata'?['hikiwake','kiken','shikkaku','hajime']:Object.keys(names);return '<details class="gesture-help"><summary>Kampfrichterzeichen · häufigste zuerst</summary><p>Hantei: Flaggenentscheidung nach Aufforderung des Hauptkampfrichters.</p><div class="gesture-grid">'+ids.map(id=>figure(id,names[id])).join('')+'</div>'+(kind==='kata'?'':'<details class="gesture-tabs"><summary>Seitenkampfrichter · Flaggenzeichen</summary><div class="gesture-grid">'+sides.map(id=>figure('side-'+id,({mienai:'Mienai · nicht gesehen',prepare:'Beide Flaggen bereithalten'}[id]||names[id]))).join('')+'</div></details>')+'<a href="https://www.djkb.com/files/KR-Gestik-02.24.pdf" target="_blank" rel="noopener">Offizielle DJKB-Gestik ↗</a></details>';}
+export function decorateGestures(){}

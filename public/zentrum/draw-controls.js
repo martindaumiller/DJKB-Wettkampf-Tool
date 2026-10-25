@@ -1,0 +1,16 @@
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const select=(name,label,values,value)=>'<label>'+label+'<select name="'+name+'">'+values.map(([v,l])=>'<option value="'+v+'" '+(String(v)===String(value)?'selected':'')+'>'+esc(l)+'</option>').join('')+'</select></label>';
+export function openDraw({s,g,form,act}){
+ const count=s.entries.filter(e=>e.active&&e.group===g.code).length,kata=g.type===0||g.type===2,pools=[1,2,4].filter(p=>p<=count),initial=pools.includes(g.pools)?g.pools:1;
+ const finals=[4,5,6].filter(n=>n%initial===0),f=finals.includes(g.finalists)?g.finalists:finals[0];
+ form('Auslosung · '+g.code,'<p><strong>'+count+' '+(g.type>=2?'Teams':'Starter')+'</strong> · '+esc(g.description)+'</p><div id="draw-settings"><div class="fields">'+select('pools','Anzahl Pools',pools.map(n=>[n,n===1?'1 Pool':n+' Pools']),initial)+(kata?select('kataMode','Kata-System',[['flags-final','Vorrunde: Flaggen / KO → Punktefinale'],['points-final','Vorrunde: Punkte → Punktefinale'],['points','Direktes Punktefinale']],g.type===0&&!g.draw?'flags-final':g.kataMode)+select('finalists','Starter im Punktefinale',finals.map(n=>[n,n+' Finalisten']),f):'')+'</div><div class="draw-preview note" id="draw-preview" aria-live="polite"></div></div><p>Die Tatamis werden anschließend im <a href="#schedule">Tatami-Plan</a> zugeteilt. Dort freie Flächen wählen oder „Auf freie Tatami“ verwenden. Ausruf und Freigabe erfolgen danach.</p><details><summary>Auslosungskennung</summary><label>Kennung<input name="seed" value="'+crypto.randomUUID()+'" required></label></details><p class="muted">Kader und gesetzte Athleten werden möglichst getrennt. Dojo-Begegnungen in der ersten Runde werden möglichst vermieden. Nur unbegonnene Auslosungen können ersetzt werden.</p>',f=>act({type:'draw',group:g.code,seed:f.seed,settings:{pools:Number(f.pools),...(kata?{finalists:Number(f.finalists),kataMode:f.kataMode}:{})}}));
+ const root=document.querySelector('#draw-settings');
+ const update=()=>{
+  const p=Number(root.querySelector('[name=pools]').value);
+  if(kata){const el=root.querySelector('[name=finalists]'),wanted=Number(el.value),valid=[4,5,6].filter(n=>n%p===0);el.innerHTML=valid.map(n=>'<option value="'+n+'" '+(n===wanted?'selected':'')+'>'+n+' Finalisten</option>').join('');}
+  const n=kata?Number(root.querySelector('[name=finalists]').value):0,mode=kata?root.querySelector('[name=kataMode]').value:'',lo=Math.floor(count/p),hi=Math.ceil(count/p);
+  root.querySelector('#draw-preview').innerHTML='<b>'+p+' '+(p===1?'Pool':'Pools')+' · '+(lo===hi?lo:lo+'–'+hi)+' '+(g.type>=2?'Teams':'Starter')+' je Pool</b>'+(kata?'<p>'+(mode==='points'||count<=n?'Alle '+count+' Starter im direkten Punktefinale.':p+' × '+n/p+' Qualifizierte = <strong>'+n+' Finalisten</strong>. '+(mode==='flags-final'?'Vorrunde mit Flaggen im KO-System. Zusätzliche Finalplätze werden durch Qualifikationskämpfe entschieden.':'Punktewertung je Pool.'))+'</p>':'<p>Halbfinale und Finale werden aus den Pool-Ergebnissen zusammengeführt.</p>');
+ };
+ root.addEventListener('change',update);update();
+ document.querySelector('#form button[type=submit]').textContent='Auslosen · Tatamis später planen';
+}

@@ -1,0 +1,7 @@
+export class ScreenLinks{
+ constructor({api,getState,baseURL,scope=()=>'',storage=null}){this.api=api;this.getState=getState;this.baseURL=baseURL;this.scope=scope;this.storage=storage;this.cache=new Map();this.pending=new Map();}
+ key(t){const s=this.getState();return 'sdm-screen:'+JSON.stringify([s.user?.id||s.user?.name,s.runId||'initial',this.scope(),t]);}
+ valid(x){try{const u=new URL(x.url),base=new URL('display.html',this.baseURL);return x.expires>Date.now()+30000&&u.origin===base.origin&&u.pathname===base.pathname&&/^[a-f0-9]{64}$/.test(u.searchParams.get('screen')||'');}catch{return false;}}
+ peek(t){const key=this.key(t);let x=this.cache.get(key);if(!x)try{x=JSON.parse(this.storage?.getItem(key)||'null');}catch{}if(this.valid(x)){this.cache.set(key,x);return x;}this.cache.delete(key);try{this.storage?.removeItem(key);}catch{}return null;}
+ async get(t,replace=false){const key=this.key(t);if(!replace){const x=this.peek(t);if(x)return x;if(this.pending.has(key))return this.pending.get(key);}const request=(async()=>{const r=await this.api('display-create',{tatami:t,...(replace?{replace:true}:{})}),url=new URL('display.html',this.baseURL);url.search='screen='+r.screen+(this.scope()?'&'+this.scope():'');const x={url:url.href,expires:r.expires};if(!this.valid(x))throw Error('Zuschauerlink ungültig');this.cache.set(key,x);try{this.storage?.setItem(key,JSON.stringify(x));}catch{}return x;})();this.pending.set(key,request);try{return await request;}finally{this.pending.delete(key);}}
+}
